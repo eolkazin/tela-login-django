@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <!-- Exibir mensagem de erro se houver -->
+      {% if error_message %}
+      <p class="error-message">{{ error_message }}</p>
+      {% endif %}
+
+      <form method="POST">
+        {% csrf_token %}
+        <div class="input-group">
+          <label for="username">Usuário</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Digite seu nome de usuário"
+            required
+            autofocus
+            <!--
+            Foco
+            automático
+            no
+            campo
+            username
+            --
+          />
+        </div>
+        <div class="input-group">
+          <label for="password">Senha</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Digite sua senha"
+            required
+          />
+        </div>
+        <button type="submit" class="btn">Entrar</button>
+        <p class="footer-text">
+          Não tem conta? <a href="{% url 'cadastro' %}">Cadastre-se</a>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
