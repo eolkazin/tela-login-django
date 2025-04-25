@@ -180,6 +180,7 @@ Siga estas etapas para configurar e executar o projeto em seu ambiente local:
 
 ## 📂 Estrutura Detalhada do Projeto:
 
+```bash
 projeto_tela_login/                 # 📂 Diretório raiz do projeto Django
 +-- app_tela_login/                 # 📂 Aplicação Django para a tela de login
 |   +-- migrations/                 # 📂 Arquivos de migração do banco de dados
@@ -207,3 +208,4 @@ projeto_tela_login/                 # 📂 Diretório raiz do projeto Django
 +-- requirements.txt                # 📄 Lista de dependências do projeto
 +-- .gitignore                    # 📄 Especifica arquivos ignorados pelo Git
 +-- .venv/                         # 📂 Diretório do ambiente virtual
+´´´
